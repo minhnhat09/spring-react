@@ -1,4 +1,4 @@
-# springboot-jwt
+# springboot-server
 ## An Example Spring Boot Application for Securing a REST API with JSON Web Token (JWT)
 
 This application can be used as a seed to quick start your spring boot REST API project with a fully functional security module.
@@ -13,8 +13,8 @@ This application can be used as a seed to quick start your spring boot REST API 
 ## To run the application
 Use one of the several ways of running a Spring Boot application. Below are just three options:
 
-1. Build using maven goal: `mvn clean package` and execute the resulting artifact as follows `java -jar springboot-jwt-0.0.1-SNAPSHOT.jar` or
-2. On Unix/Linux based systems: run `mvn clean package` then run the resulting jar as any other executable `./springboot-jwt-0.0.1-SNAPSHOT.jar`
+1. Build using maven goal: `mvn clean package` and execute the resulting artifact as follows `java -jar springboot-server-0.0.1-SNAPSHOT.jar` or
+2. On Unix/Linux based systems: run `mvn clean package` then run the resulting jar as any other executable `./springboot-server-0.0.1-SNAPSHOT.jar`
 3. Build and start as a Docker container. Instructions at: [README](src/main/docker/README.md)
 
 

@@ -1,18 +1,18 @@
 ## SpringBoot JWT Container
 
-Following instructions explain how to publish springboot-jwt tutorial APIs via a portable Docker container.
+Following instructions explain how to publish springboot-server tutorial APIs via a portable Docker container.
 
 ### Pre-requisites
 You need to have:
 - a Docker installation available locally. See [Docker website](https://docs.docker.com/install/) on installation instructions for Windows and Linux users.
 - at least 100MB of local storage.
-- springboot-jwt project sources locally compiled, and shell pointing to project root.
+- springboot-server project sources locally compiled, and shell pointing to project root.
 
 
 ### Build image
 `mvn clean package docker:build`
 
-Now if you issue a `docker images` command you should see `springboot-jwt:latest` image listed.
+Now if you issue a `docker images` command you should see `springboot-server:latest` image listed.
 
 
 ### Start container
@@ -30,7 +30,7 @@ Advanced usage: custom server IP and server port
 where `<SERVER_IP>` and `<SERVER_PORT>` are the IP address and port where Maven will test health check against (usually localhost, 127.0.0.1, or 192.168.99.100 on legacy Docker Toolbox).
 
 #### From command line
-`docker run -d -p <SERVER_PORT>:8080 springboot-jwt`
+`docker run -d -p <SERVER_PORT>:8080 springboot-server`
 
 Now if you issue a `docker ps` command you should see a new running container listed.
 
