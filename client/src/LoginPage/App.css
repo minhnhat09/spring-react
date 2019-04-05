@@ -1,0 +1,30 @@
+body {
+	background-color: #ecf0f1;
+}
+
+.page-login {
+	margin-top: 25px;
+}
+
+.header-normal {
+	font-weight: 100 !important;
+}
+
+.grid.container {
+	margin-top: 1em;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+img[src$='#img-markdown'] {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	background-color: transparent;
+}
