@@ -6,4 +6,6 @@ services:
       context: ./server
     volumes:
       - ./server:/app
+    environment:
+      - spring.data.mongodb.uri=mongodb://admin:admin@ds117070.mlab.com:17070/life-manager-dev
     
