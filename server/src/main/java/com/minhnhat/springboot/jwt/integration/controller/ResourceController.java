@@ -19,7 +19,7 @@ public class ResourceController {
     private GenericService userService;
 
     @RequestMapping(value ="/cities")
-    @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
+    // @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
     public List<RandomCity> getUser(){
         return userService.findAllRandomCities();
     }
