@@ -8,11 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-
 public class SpringbootJwtApplication implements CommandLineRunner {
 
   @Autowired
-  private CustomerRepository repository;
+  private CustomerRepository customerRepository;
 
   public static void main(String[] args) {
     SpringApplication.run(SpringbootJwtApplication.class, args);
@@ -21,16 +20,16 @@ public class SpringbootJwtApplication implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    repository.deleteAll();
+    customerRepository.deleteAll();
 
     // save a couple of customers
-    repository.save(new Customer("Alice", "Smith"));
-    repository.save(new Customer("Bob", "Smith"));
+    customerRepository.save(new Customer("Alice", "Smith"));
+    customerRepository.save(new Customer("Bob", "Smith"));
 
     // fetch all customers
     System.out.println("Customers found with findAll():");
     System.out.println("-------------------------------");
-    for (Customer customer : repository.findAll()) {
+    for (Customer customer : customerRepository.findAll()) {
       System.out.println(customer);
     }
     System.out.println();
@@ -38,11 +37,11 @@ public class SpringbootJwtApplication implements CommandLineRunner {
     // fetch an individual customer
     System.out.println("Customer found with findByFirstName('Alice'):");
     System.out.println("--------------------------------");
-    System.out.println(repository.findByFirstName("Alice"));
+    System.out.println(customerRepository.findByFirstName("Alice"));
 
     System.out.println("Customers found with findByLastName('Smith'):");
     System.out.println("--------------------------------");
-    for (Customer customer : repository.findByLastName("Smith")) {
+    for (Customer customer : customerRepository.findByLastName("Smith")) {
       System.out.println(customer);
     }
   }
