@@ -21,7 +21,7 @@ import java.beans.PropertyVetoException;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.minhnhat.springboot.jwt.integration.repository")
-@Profile({"default", "dev"})
+@Profile("default")
 public class DatasourceConfig {
 
     @Bean

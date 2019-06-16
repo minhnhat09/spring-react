@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/springjwt")
+@RequestMapping("/api")
 public class ResourceController {
   @Autowired
   private GenericService userService;
@@ -22,8 +22,9 @@ public class ResourceController {
   private CustomerRepository customerRepository;
 
   @RequestMapping(value = "/cities")
-  // @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
+  // Uncomment when to prod: @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
   public List<RandomCity> getUser() {
+
     return userService.findAllRandomCities();
   }
 
